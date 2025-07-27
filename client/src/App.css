@@ -1,0 +1,119 @@
+/* Background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #2e3440, #3b4252);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+}
+
+/* Main Container */
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Filters Wrapper */
+.filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Filter Inputs */
+.filters input {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+}
+
+.filters input::placeholder {
+  color: #cbd5e1;
+}
+
+.filters input:focus {
+  outline: none;
+  border-color: #4fc3f7;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 5px #4fc3f7;
+}
+
+/* Chart Container */
+/* Chart Container */
+/* Chart Container */
+.chart-container {
+  width: 100%;
+  min-height: 400px;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease-in-out;
+  margin: 0 auto;
+}
+
+/* Make the chart bigger and responsive */
+.chart-container canvas {
+  max-height: 500px !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* Add smooth appearance */
+.chart-container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 50px rgba(0, 123, 255, 0.4);
+}
+
+/* Optional: adjust legend if needed */
+.chart-container .chartjs-legend {
+  color: #fff;
+  font-weight: 500;
+}
+
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .filters {
+    grid-template-columns: 1fr;
+  }
+  .chart-container {
+    padding: 1rem;
+    min-height: 300px;
+  }
+}
