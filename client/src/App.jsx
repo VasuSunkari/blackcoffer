@@ -10,7 +10,7 @@ const App = () => {
 
   useEffect(() => {
     const query = new URLSearchParams(filters).toString();
-    axios.get(`/api/insights?${query}`)
+    axios.get(`https://blackcoffer-lxi2.onrender.com/api/insights?${query}`)
       .then(res => setData(res.data));
   }, [filters]);
 
